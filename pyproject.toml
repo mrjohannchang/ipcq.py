@@ -4,7 +4,7 @@ to = {format = "setuppy", path = "setup.py"}
 
 [tool.poetry]
 name = "ipcq"
-version = "1.0.4"
+version = "1.1.0"
 description = ""
 authors = ["Henry Chang <mr.changyuheng@gmail.com>"]
 readme = "README.md"
