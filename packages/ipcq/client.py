@@ -7,5 +7,5 @@ class QueueManagerClient(QueueManager):
         self.connect()
 
 
-if not 'get_queue' in QueueManagerClient._registry:
+if 'get_queue' not in QueueManagerClient._registry:
     QueueManagerClient.register('get_queue')

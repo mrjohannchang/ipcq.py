@@ -19,5 +19,5 @@ def get_queue(ident: Union[AnyStr, int, type(None)] = None) -> multiprocessing.Q
     return qs[ident]
 
 
-if not 'get_queue' in QueueManagerServer._registry:
+if 'get_queue' not in QueueManagerServer._registry:
     QueueManagerServer.register('get_queue', get_queue)
