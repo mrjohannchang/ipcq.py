@@ -2,6 +2,8 @@
 
 A simple inter-process communication (IPC) Queue built on top of the built-in library [multiprocessing](https://docs.python.org/3/library/multiprocessing.html).
 
+![](examples/showcase.gif)
+
 * [Quick Start](#quick-start)
 * [API](#api)
   + [class ipcq.QueueManagerServer](#class-ipcqqueuemanagerserver)
