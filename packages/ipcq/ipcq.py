@@ -16,5 +16,5 @@ class Address:
 
 class AuthKey:
     AUTO: type(None) = None
-    DEFAULT: bytes = os.path.join(os.getcwd(), os.path.basename(__package__)).encode()
+    DEFAULT: bytes = __package__.encode()
     EMPTY: bytes = ''.encode()
