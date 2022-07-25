@@ -34,7 +34,12 @@ Please checkout out the [examples](examples) folder.
 
 #### Constructor
 
-The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager), please refer to it.
+The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager), please refer to it for more info.
+
+`address` can be `ipcq.Address.AUTO` or `ipcq.Address.CWD`. When it's given `ipcq.Address.AUTO`, a random address will be chosen.
+`ipcq.Address.CWD` means using a file that lives in the current working directory.
+
+`authkey` is just like the password for authentication. It can be `ipcq.AuthKey.AUTO`, `ipcq.AuthKey.DEFAULT` or `ipcq.AuthKey.EMPTY`.
 
 #### Methods
 
@@ -51,7 +56,12 @@ Return a queue corresponded with then `ident`.
 
 #### Constructor
 
-The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager), please refer to it.
+The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager), please refer to it for more info.
+
+`address` can be `ipcq.Address.AUTO` or `ipcq.Address.CWD`. When it's given `ipcq.Address.AUTO`, a random address will be chosen.
+`ipcq.Address.CWD` means using a file that lives in the current working directory.
+
+`authkey` is just like the password for authentication. It can be `ipcq.AuthKey.AUTO`, `ipcq.AuthKey.DEFAULT` or `ipcq.AuthKey.EMPTY`.
 
 #### Methods
 

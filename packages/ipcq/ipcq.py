@@ -11,9 +11,10 @@ class QueueManager(multiprocessing.managers.BaseManager):
 
 class Address:
     AUTO: type(None) = None
-    DEFAULT: str = os.path.join(os.getcwd(), f".{os.path.basename(__package__)}")
+    CWD: str = os.path.join(os.getcwd(), f".{os.path.basename(__package__)}")
 
 
 class AuthKey:
     AUTO: type(None) = None
     DEFAULT: bytes = os.path.join(os.getcwd(), os.path.basename(__package__)).encode()
+    EMPTY: bytes = ''.encode()

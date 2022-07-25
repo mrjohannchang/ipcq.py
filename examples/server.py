@@ -11,7 +11,7 @@ import ipcq
 
 def serve(term_ev: threading.Event):
     qms: ipcq.QueueManagerServer
-    with ipcq.QueueManagerServer(address=ipcq.Address.DEFAULT, authkey=ipcq.AuthKey.DEFAULT) as qms:
+    with ipcq.QueueManagerServer(address=ipcq.Address.CWD, authkey=ipcq.AuthKey.DEFAULT) as qms:
         print(f"Server address: {qms.address}")
 
         while not term_ev.is_set():
