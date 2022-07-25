@@ -2,9 +2,18 @@
 
 A simple inter-process communication (IPC) Queue built on top of the built-in library [multiprocessing](https://docs.python.org/3/library/multiprocessing.html).
 
+* [Quick Start](#quick-start)
+* [API](#api)
+  + [class ipcq.QueueManagerServer](#class-ipcqqueuemanagerserver)
+    - [Constructor](#constructor)
+    - [Methods](#methods)
+  + [class ipcq.QueueManagerClient](#class-ipcqqueuemanagerclient)
+    - [Constructor](#constructor-1)
+    - [Methods](#methods-1)
+
 ## Quick Start
 
-### On the server side
+**Server**
 
 ```
 import ipcq
@@ -14,7 +23,7 @@ with ipcq.QueueManagerServer(address=ipcq.Address.DEFAULT, authkey=ipcq.AuthKey.
   server.get_queue().get()
 ```
 
-### On the client side
+**Client**
 
 ```
 import ipcq
@@ -24,9 +33,7 @@ client = ipcq.QueueManagerClient(address=ipcq.Address.DEFAULT, authkey=ipcq.Auth
 client.get_queue().put('a message')
 ```
 
-## Example
-
-Please checkout out the [examples](examples) folder.
+Please checkout out the [examples](examples) folder for more examples.
 
 ## API
 
@@ -46,7 +53,7 @@ The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/l
 All methods in [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager) are inherited.
 The followings are the addtions.
 
-##### get_queue(ident: Optional[Union[AnyStr, int, type(None)]] = None) -> queue.Queue
+**get_queue(ident: Optional[Union[AnyStr, int, type(None)]] = None) -> queue.Queue**
 
 `ident` is the identity, it can be string-like objects, `int` or `None`. The default is `None`. This is for differetiate the obtained queues.
 
@@ -68,7 +75,7 @@ The same with [multiprocessing.managers.BaseManager](https://docs.python.org/3/l
 All methods in [multiprocessing.managers.BaseManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.BaseManager) are inherited.
 The followings are the addtions.
 
-##### get_queue(ident: Optional[Union[AnyStr, int, type(None)]] = None) -> queue.Queue
+**get_queue(ident: Optional[Union[AnyStr, int, type(None)]] = None) -> queue.Queue**
 
 `ident` is the identity, it can be string-like objects, `int` or `None`. The default is `None`. This is for differetiate the obtained queues.
 
